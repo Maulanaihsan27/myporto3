@@ -3,13 +3,14 @@ self.addEventListener("install", event => {
     const cache = await caches.open("pwa-assets");
     try {
       await cache.addAll([
-    "/",
-    "app.js",
-    "A.jpg",
-    "detail.html",
-    "index.html",
-    "Project One.png"]); 
-} catch (err) {
+        "./",
+        "./app.js",
+        "./A.jpg",
+        "./detail.html",
+        "./index.html",
+        "./Project One.png"
+      ]);
+    } catch (err) {
       console.error("Gagal menyimpan cache:", err);
     }
   })());
